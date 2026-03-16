@@ -20,7 +20,6 @@
   --yellow: #fbbf24;
   --yellow-dim: rgba(251,191,36,.12);
 
-  /* Background layers matching login */
   --bg: #080d1a;
   --bg2: #0a1020;
   --surface: rgba(255,255,255,.04);
@@ -47,12 +46,10 @@ body {
   overflow-x: hidden;
 }
 
-/* ── STARFIELD CANVAS ── */
 #stars {
   position: fixed; inset: 0; z-index: 0; pointer-events: none;
 }
 
-/* ── AMBIENT GLOWS (matching login) ── */
 .ambient {
   position: fixed; pointer-events: none; z-index: 0;
   border-radius: 50%; filter: blur(120px); opacity: .18;
@@ -61,7 +58,6 @@ body {
 .ambient-2 { width: 500px; height: 400px; bottom: 10%; right: -100px; background: #003bff; opacity: .1; }
 .ambient-3 { width: 300px; height: 300px; bottom: 30%; left: 20%; background: #00c97a; opacity: .06; }
 
-/* ── NAV ── */
 nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 100;
   display: flex; align-items: center; justify-content: space-between;
@@ -72,12 +68,6 @@ nav {
   transition: border-color 200ms;
 }
 .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
-.logo-mark { width: 28px; height: 32px; display: flex; flex-direction: column; gap: 4px; }
-.lm-bar { height: 8px; border-radius: 999px; background: var(--blue); }
-.lm-bar:nth-child(1) { width: 28px; }
-.lm-bar:nth-child(2) { width: 20px; }
-.lm-dot { width: 9px; height: 9px; border-radius: 50%; background: var(--green); }
-.logo-text { font-size: 17px; font-weight: 700; letter-spacing: -.03em; color: var(--text); }
 
 .nav-links { display: none; }
 
@@ -98,10 +88,8 @@ nav {
 }
 .btn-nav-primary:hover { background: var(--blue-hover); }
 
-/* ── CONTENT WRAPPER ── */
 .content { position: relative; z-index: 1; }
 
-/* ── HERO ── */
 .hero {
   padding: 140px 40px 90px;
   max-width: 1100px; margin: 0 auto;
@@ -169,7 +157,6 @@ h1.hero-title span { color: var(--blue); }
 .hero-stat-label { font-size: 13px; color: var(--muted); margin-top: 2px; }
 .hero-stat-sep { width: 1px; height: 36px; background: var(--border); }
 
-/* ── SCREENSHOT ── */
 .hero-screenshot {
   margin-top: 68px; width: 100%;
   border-radius: 20px; overflow: hidden;
@@ -238,7 +225,6 @@ h1.hero-title span { color: var(--blue); }
 .ss-bars { display:flex; align-items:flex-end; gap:4px; height:64px; margin-top:8px; }
 .ss-bar-item { flex:1; border-radius:3px 3px 0 0; }
 
-/* ── LOGOS ── */
 .logos-strip {
   position: relative; z-index: 1;
   border-top: 1px solid var(--border);
@@ -256,7 +242,6 @@ h1.hero-title span { color: var(--blue); }
 }
 .logo-item:hover { color: var(--sub); }
 
-/* ── SECTION COMMON ── */
 .section { max-width: 1100px; margin: 0 auto; padding: 96px 40px; }
 .section-centered { text-align: center; }
 .eyebrow {
@@ -271,10 +256,8 @@ h1.hero-title span { color: var(--blue); }
 .section-p { font-size: 17px; color: var(--sub); line-height: 1.65; max-width: 520px; margin: 14px auto 0; }
 .section-p.left { margin: 14px 0 0; }
 
-/* section alternating bg */
 .section-bg { background: rgba(255,255,255,.02); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
 
-/* ── PROBLEM ── */
 .problem-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 12px; margin-top: 52px; }
 .problem-card {
   background: var(--surface); border-radius: var(--r); padding: 28px;
@@ -292,7 +275,6 @@ h1.hero-title span { color: var(--blue); }
 .problem-card h3 { font-size: 16px; font-weight: 700; letter-spacing: -.03em; margin-bottom: 8px; color: var(--text); }
 .problem-card p { font-size: 14px; color: var(--sub); line-height: 1.6; }
 
-/* ── HOW ── */
 .steps { display: grid; grid-template-columns: repeat(4,1fr); gap: 0; margin-top: 56px; position: relative; }
 .steps::before {
   content:''; position:absolute; top:20px; left:10%; right:10%; height:1px;
@@ -309,7 +291,6 @@ h1.hero-title span { color: var(--blue); }
 .step h3 { font-size:15px; font-weight:700; letter-spacing:-.02em; margin-bottom:8px; color:var(--text); }
 .step p { font-size:13px; color:var(--sub); line-height:1.6; }
 
-/* ── FEATURES ── */
 .features-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:52px; }
 .feature-card {
   background: var(--surface); border-radius: var(--r); padding: 32px;
@@ -333,13 +314,11 @@ h1.hero-title span { color: var(--blue); }
   border: 1px solid var(--blue-border); border-radius:999px; padding:3px 10px;
 }
 
-/* ── BENEFITS ── */
 .benefits-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:40px 52px; margin-top:56px; }
 .benefit-num { font-size:12px; font-weight:700; color:var(--blue); letter-spacing:.06em; text-transform:uppercase; margin-bottom:10px; }
 .benefit h3 { font-size:18px; font-weight:700; letter-spacing:-.03em; margin-bottom:8px; color:var(--text); }
 .benefit p { font-size:14px; color:var(--sub); line-height:1.65; }
 
-/* ── TESTIMONIALS ── */
 .test-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-top:52px; }
 .test-card {
   background:var(--surface); border-radius:var(--r); padding:28px;
@@ -354,7 +333,6 @@ h1.hero-title span { color: var(--blue); }
 .test-name { font-size:13px; font-weight:600; color:var(--text); }
 .test-role { font-size:11.5px; color:var(--muted); }
 
-/* ── CTA FINAL ── */
 .cta-section {
   position:relative; overflow:hidden;
   padding:100px 40px; text-align:center;
@@ -383,7 +361,6 @@ h1.hero-title span { color: var(--blue); }
 .cta-btns { display:flex; align-items:center; justify-content:center; gap:10px; }
 .cta-note { margin-top:16px; font-size:12.5px; color:var(--muted); }
 
-/* ── FOOTER ── */
 footer {
   border-top:1px solid var(--border); padding:36px 40px;
   display:flex; align-items:center; justify-content:space-between;
@@ -396,11 +373,9 @@ footer {
 .footer-links a:hover { color:var(--text); }
 .footer-copy { font-size:12.5px; color:var(--muted); }
 
-/* ── REVEAL ── */
 .reveal { opacity:0; transform:translateY(20px); transition:opacity .55s ease, transform .55s ease; }
 .reveal.visible { opacity:1; transform:none; }
 
-/* ── PLANS ── */
 .plans-section { border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); background: rgba(255,255,255,.02); }
 .plans-billing { display:flex; align-items:center; justify-content:center; gap:10px; padding:0 0 32px; }
 .plans-b-opt { font-size:13px; font-weight:500; color:var(--muted); cursor:pointer; transition:color 180ms; user-select:none; }
@@ -443,7 +418,6 @@ footer {
 .plan-cta-current { background:var(--surface); color:var(--muted); border:1px solid var(--border); cursor:default; pointer-events:none; }
 .plans-footer { border-top:1px solid var(--border); padding:14px 0 0; display:flex; align-items:center; justify-content:center; gap:6px; font-size:12px; color:var(--muted); margin-top:28px; }
 
-/* ── RESPONSIVE ── */
 @media (max-width:860px) {
   nav { padding:0 20px; }
   .nav-links { display:none; }
@@ -462,10 +436,8 @@ footer {
 </head>
 <body>
 
-<!-- STARFIELD -->
 <canvas id="stars"></canvas>
 
-<!-- AMBIENT GLOWS -->
 <div class="ambient ambient-1"></div>
 <div class="ambient ambient-2"></div>
 <div class="ambient ambient-3"></div>
@@ -475,7 +447,15 @@ footer {
 <!-- NAV -->
 <nav id="nav">
   <a href="#" class="nav-logo">
-    <img src="/mnt/user-data/uploads/1773600010371_image.png" alt="Foresail" style="height:32px;width:auto;filter:brightness(0) invert(1);" />
+    <!-- Logo Foresail em SVG inline -->
+    <svg height="28" viewBox="0 0 160 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Ícone F -->
+      <rect x="0" y="2" width="22" height="9" rx="4.5" fill="#0040ff"/>
+      <rect x="0" y="15" width="16" height="9" rx="4.5" fill="#0040ff"/>
+      <circle cx="8" cy="33" r="5" fill="#00e676"/>
+      <!-- Texto "oresail" -->
+      <text x="30" y="31" font-family="Geist, system-ui, sans-serif" font-size="26" font-weight="700" letter-spacing="-0.04em" fill="#f0f4ff">oresail</text>
+    </svg>
   </a>
   <div class="nav-actions">
     <a href="#" class="btn-nav-ghost">Entrar</a>
@@ -555,7 +535,7 @@ footer {
     <div class="logo-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>GitHub</div>
     <div class="logo-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="#2684FF"><path d="M11.571 11.513H0a5.218 5.218 0 0 0 5.232 5.215h2.13v2.057A5.215 5.215 0 0 0 12.575 24V12.518a1.005 1.005 0 0 0-1.004-1.005zm5.723-5.756H5.757a5.215 5.215 0 0 0 5.214 5.214h2.13v2.058a5.218 5.218 0 0 0 5.215 5.214V6.762a1.005 1.005 0 0 0-1.022-1.005zM17.293 0H6.005a5.218 5.218 0 0 0 5.214 5.215h2.13V7.27A5.215 5.215 0 0 0 18.563 12.486V1.005A1.005 1.005 0 0 0 17.293 0z"/></svg>Jira</div>
     <div class="logo-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="#4A154B"><path d="M5.042 15.165a2.528 2.528 0 0 1-2.52 2.523A2.528 2.528 0 0 1 0 15.165a2.527 2.527 0 0 1 2.522-2.52h2.52v2.52zM6.313 15.165a2.527 2.527 0 0 1 2.521-2.52 2.527 2.527 0 0 1 2.521 2.52v6.313A2.528 2.528 0 0 1 8.834 24a2.528 2.528 0 0 1-2.521-2.522v-6.313zM8.834 5.042a2.528 2.528 0 0 1-2.521-2.52A2.528 2.528 0 0 1 8.834 0a2.528 2.528 0 0 1 2.521 2.522v2.52H8.834zM8.834 6.313a2.528 2.528 0 0 1 2.521 2.521 2.528 2.528 0 0 1-2.521 2.521H2.522A2.528 2.528 0 0 1 0 8.834a2.528 2.528 0 0 1 2.522-2.521h6.312zM18.956 8.834a2.528 2.528 0 0 1 2.522-2.521A2.528 2.528 0 0 1 24 8.834a2.528 2.528 0 0 1-2.522 2.521h-2.522V8.834zM17.688 8.834a2.528 2.528 0 0 1-2.523 2.521 2.527 2.527 0 0 1-2.52-2.521V2.522A2.527 2.527 0 0 1 15.165 0a2.528 2.528 0 0 1 2.523 2.522v6.312zM15.165 18.956a2.528 2.528 0 0 1 2.523 2.522A2.528 2.528 0 0 1 15.165 24a2.527 2.527 0 0 1-2.52-2.522v-2.522h2.52zM15.165 17.688a2.527 2.527 0 0 1-2.52-2.523 2.526 2.526 0 0 1 2.52-2.52h6.313A2.527 2.527 0 0 1 24 15.165a2.528 2.528 0 0 1-2.522 2.523h-6.313z"/></svg>Slack</div>
-    <div class="logo-item"><svg width="15" height="15" viewBox="0 0 92 92" fill="currentColor"><path d="M90.156 41.965L50.036 1.848a5.918 5.918 0 00-8.372 0l-8.328 8.328 10.566 10.566a7.03 7.03 0 017.23 1.684 7.043 7.043 0 011.673 7.277l10.183 10.183a7.026 7.026 0 017.278 1.672 7.04 7.04 0 010 9.957 7.045 7.045 0 01-9.961 0 7.038 7.038 0 01-1.532-7.66l-9.5-9.497V59.36a7.04 7.04 0 011.86 11.29 7.04 7.04 0 01-9.957 0 7.04 7.04 0 010-9.958 7.05 7.05 0 012.304-1.539V33.926a7.033 7.033 0 01-2.304-1.535 7.049 7.049 0 01-1.512-7.692L23.799 14.135 1.844 36.094a5.918 5.918 0 000 8.37l40.12 40.118a5.919 5.919 0 008.372 0L90.156 50.336a5.92 5.92 0 000-8.37"/></svg>GitLab</div>
+    <div class="logo-item"><svg width="15" height="15" viewBox="0 0 92 92" fill="currentColor"><path d="M90.156 41.965L50.036 1.848a5.918 5.918 0 00-8.372 0l-8.328 8.328 10.566 10.566a7.03 7.03 0 017.23 1.684 7.043 7.043 0 011.673 7.277l10.183 10.183a7.026 7.026 0 017.278 1.672 7.04 7.04 0 010 9.957 7.045 7.045 0 01-9.961 0 7.038 7.038 0 01-1.532-7.66l-9.5-9.497V59.36a7.04 7.04 0 011.86 11.29 7.04 7.04 0 01-9.957 0 7.04 7.04 0 010-9.958 7.05 7.05 0 012.304-1.539V33.926a7.033 7.033 0 01-2.304-1.535 7.049 7.049 0 01-1.512-7.692L23.799 14.135 1.844 36.094a5.918 5.918 0 000 8.37l40.12 40.118a5.919 5.919 0 008.372 0L90.156 50.336a5.92 5.92 0 000-8.370"/></svg>GitLab</div>
     <div class="logo-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="#0078D4"><rect x="0" y="0" width="11" height="11" rx="1"/><rect x="13" y="0" width="11" height="11" rx="1" opacity=".7"/><rect x="0" y="13" width="11" height="11" rx="1" opacity=".7"/><rect x="13" y="13" width="11" height="11" rx="1" opacity=".4"/></svg>Azure DevOps</div>
   </div>
 </div>
@@ -729,7 +709,7 @@ footer {
 <!-- FOOTER -->
 <footer>
   <a href="#" class="footer-logo">
-    <img src="/mnt/user-data/uploads/1773600010371_image.png" alt="Foresail" style="height:28px;width:auto;filter:brightness(0) invert(1);opacity:.7;" />
+    <img src="/mnt/user-data/uploads/1773617573262_image.png" alt="Foresail" style="height:28px;width:auto;filter:brightness(0) invert(1);opacity:.7;" />
   </a>
   <ul class="footer-links">
     <li><a href="#">Produto</a></li>
@@ -779,7 +759,6 @@ function drawStars(t) {
     ctx.fillStyle = `rgba(160,190,255,${opacity})`;
     ctx.fill();
   });
-  // occasional bright star
   stars.forEach(s => {
     if (s.r > 1.2) {
       const glow = ctx.createRadialGradient(s.x, s.y, 0, s.x, s.y, s.r * 4);
